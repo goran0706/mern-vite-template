@@ -1,0 +1,42 @@
+{
+  "name": "mern-vite-template",
+  "version": "1.0.0",
+  "description": "MERN vite template",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "babel src -d dist",
+    "start": "npm run build && nodemon dist/main.js",
+    "serve": "npm run build && node dist/main.js",
+    "test": "npm run build && mocha --require @babel/register"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/register": "^7.22.15",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "express-rate-limit": "^7.1.4",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "morgan": "^1.10.0"
+  }
+}
